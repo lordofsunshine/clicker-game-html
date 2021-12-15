@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300&family=Outfit:wght@300&family=Shippori+Antique&display=swap');
+
+:root {
+	--background-color: #262626;
+	--highlight-color: rgb(12, 180, 54);
+	--error-color: #B3001B;
+	--border-color: rgb(104, 46, 171);
+	--color: white;
+}
+
+html, body {
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	text-align: center;
+}
+body {
+	background-color: var(--background-color);
+	color: var(--color);
+	font-family: 'Outfit', sans-serif;
+	height: 90vh;
+}
+
+h1 {
+	color: var(--highlight-color);
+}
+h1 {
+	font-family: 'Shippori Antique', sans-serif;
+}
+
+.button-block {
+	display: block;
+}
+.off {}
+.on {
+	background-color: rgb(104, 104, 214) !important;
+}
+.options {
+	width: 100%;
+	height: 50px;
+	background-color: rgba(0,0,0,0.3); /* might change this to a solid background later */
+}
+.options button {
+	font-size: 15px;
+	color: white;
+	height: 30px;
+	margin: 10px auto;
+	border: 3px solid rgb(104, 104, 214);
+	background-color: rgba(0,0,0,0);
+	border-radius: 2px;
+	transition: .1s;
+}
+.options button:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 1px 1px 3px black;
+}
+
+@media (max-width > 500px) {
+	height: 100px;
+}
+
+
+.xp-bar {
+	margin: 10px auto;
+	font-family: 'M PLUS 2', sans-serif;
+}
+.xp-bar-outer {
+	margin: 5px auto;
+	width: 60%;
+	max-width: 1000px;
+	height: 30px;
+	border: 3px solid var(--border-color);
+	border-radius: 10px;
+	background-color: #242138;
+
+}
+.xp-bar-inner {
+	width: 50%;
+	height: 30px;
+	background-color: rgb(104, 104, 214);
+	border-radius: 5px;
+	transition: .2s;
+}
+
+
+#click-button {
+	width: 300px;
+	height: 200px;
+	margin: 30px auto;
+	border-radius: 15px;
+	border: 5px solid rgb(233, 105, 0);
+	background-color: rgb(255, 145, 0);
+	color: white;
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 50px;
+	box-shadow: 5px 5px 7px rgb(36, 35, 35);
+	transition: .1s;
+}
+#click-button:hover {
+	transform: translate(0px, -2px);
+	box-shadow: 7px 7px 10px rgb(36, 35, 35);
+}
+
+
+@media only screen and (max-width: 700px) {
+  .right, .left {
+		border-radius: 4px;
+		min-width: 300px;
+		display: inline-block;
+		margin: auto;
+		height: 150px;
+		border: 4px solid rgb(30, 30, 32);
+		text-align: center !important;
+	}
+	.left span {
+		display: block;
+		font-size: 25px;
+	}
+	.left h2 {
+		font-size: 15px;
+	}
+}
+.stats {
+	min-width: 300px;
+	width: 80%;
+	max-width: 13000px;
+	margin: 10px auto;
+	border: 3px solid rgb(104, 104, 214);
+	border-radius: 10px;
+}
+
+.right, .left {
+	border-radius: 4px;
+	width: 48%;
+	display: inline-block;
+	margin: auto;
+	height: 150px;
+	vertical-align: middle;
+}
+.right {
+	border-left: 4px solid rgb(30, 30, 32);
+	color: white;
+}
+.left {
+	border-right: 4px solid rgb(30, 30, 32);
+	text-align: justify;
+	padding-left: 10px;
+	color: white;
+}
+.center {
+	border-top: 4px solid rgb(30, 30, 32);
+}
+
+
+
+.popup {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	overflow: auto;
+}
+.popup-content {
+	margin: 20px auto;
+}
+.grayed-out {
+	border: 3px solid rgb(114, 114, 114) !important;
+	color: rgb(151, 151, 151) !important;
+}
+.upgrade {
+	width: 300px;
+	height: 300px;
+	border: 3px solid rgb(104, 104, 214);
+	border-radius: 5px;
+	margin: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.upgrade:hover {
+	box-shadow: 0px 0px 10px rgb(255, 255, 255);
+	transform: translate(0px, -3px);
+}
+.title {
+	text-decoration: underline;
+	color: var(--highlight-color);
+}
+.cost {
+	font-family: 'Trebuchet MS', sans-serif;
+	font-weight: bolder;
+}
+.cost-value {
+	font-family: monospace;
+	font-weight: normal;
+	font-size: 17px;
+	background-color: rgb(36, 35, 35);
+}
+
+.upgrade table {
+	margin: 5px auto;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	width: 50%;
+}
+.upgrade table th {
+	text-decoration: underline;
+}
+.upgrade table td {
+	background-color: var(--background-color);
+	border-radius: 3px;
+}
+
+.neutral {
+	color: rgb(155, 155, 6);
+}
+.positive {
+	color: rgb(0, 255, 0);
+}
+.negative {
+	color: red;
+}
+.popup p {
+	margin-top: 15px;
+	padding: 5px;
+}
+
+.popup button {
+	font-size: 15px;
+	color: white;
+	height: 30px;
+	margin: 10px auto;
+	border: 3px solid rgb(104, 104, 214);
+	background-color: rgba(0,0,0,0);
+	border-radius: 2px;
+	transition: .1s;
+}
+.popup button:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 1px 1px 3px black;
+}
+#upgrades {
+	display: none;
+}
+
+#no-upgrades-message {
+	margin: 20px auto;
+	border-top: 3px solid rgb(104, 104, 214);
+	border-bottom: 3px solid rgb(104, 104, 214);
+	min-width: 300px;
+	width: 60%;
+	max-width: 1000px;
+	display: none;
+}
+
+.bigger-button {
+	width: 150px !important;
+	height: 70px !important;
+	font-size: 25px !important;
+}
+
+
+#settings {
+	display: none;
+}
+
+.alert-banner {
+	width: 60%;
+	height: 40px;
+	position: fixed;
+	top: 40px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	text-align: center;
+	border-radius: 5px;
+	border: 2px solid rgb(12, 180, 54);
+	z-index: 15;
+	background-color: rgba(0,0,0,0.9);
+}
+.alert-banner h1 {
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	animation: .5s appear;
+}
+.close-alert {
+	position: fixed;
+	top: -12px;
+	right: -12px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 3px solid rgb(12, 180, 54);
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	background-color: black;
+}
+.close-alert:hover {
+	background-color: rgb(22, 22, 22);
+	cursor: pointer;
+}
+
+@keyframes appear {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
