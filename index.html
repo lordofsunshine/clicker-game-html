@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Click Spammer</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+		<div class='popup' id='upgrades'>
+			<div class='popup-content'>
+				<h1>Upgrades</h1>
+				<div class='bulk-purchase-wrapper'>
+					<label for='amount'>Purchase Amount</label>
+					<select name='amount' id='amount'>
+						<option value='1'>1</option>
+						<option value='10'>10</option>
+						<option value='25'>25</option>
+						<option value='50'>50</option>
+						<option value='100'>100</option>
+					</select>
+				</div>
+				<div id='no-upgrades-message'>
+					<h3>You cannot afford any upgrades!</h3>
+				</div>
+				<div class='all-upgrades'>
+					<div class='upgrade' id='u-one' onclick='upgrade(100,0,1)'>
+						<h3 class='title'>Auto Clicker</h3>
+						<p class='cost'>Cost: <span class='cost-value'>100</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='neutral'>±0</span></td>
+								<td><span class='positive'>+1</span></td>
+							</tr>
+						</table>
+						<p class='description'>A simple clicker to mindlessly press the button over and over again</p>
+					</div>
+
+					<div class='upgrade' id='u-two' onclick='upgrade(100,1,0)'>
+						<h3 class='title'>Fingers</h3>
+						<p class='cost'>Cost: <span class='cost-value'>100</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='positive'>+1</span></td>
+								<td><span class='neutral'>±0</span></td>
+							</tr>
+						</table>
+						<p class='description'>Extra fingers for extra clicking.</p>
+					</div>
+
+					<div class='upgrade' id='u-three' onclick='upgrade(150,3,-1)'>
+						<h3 class='title'>Feet</h3>
+						<p class='cost'>Cost: <span class='cost-value'>150</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='positive'>+3</span></td>
+								<td><span class='negative'>-1</span></td>
+							</tr>
+						</table>
+						<p class='description'>Feet help you to click really fast! The downside being they get in the way of everything else</p>
+					</div>
+
+					<div class='upgrade' id='u-four' onclick='upgrade(200,-1,3)'>
+						<h3 class='title'>Toddler</h3>
+						<p class='cost'>Cost: <span class='cost-value'>200</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='negative'>-1</span></td>
+								<td><span class='positive'>+3</span></td>
+							</tr>
+						</table>
+						<p class='description'>Does a good job of pressing buttons, but is annoying and always crying.</p>
+					</div>
+				
+					<div class='upgrade' id='u-five' onclick='upgrade(800,0,8)'>
+						<h3 class='title'>Octopus</h3>
+						<p class='cost'>Cost: <span class='cost-value'>800</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='neutral'>±0</span></td>
+								<td><span class='positive'>+8</span></td>
+							</tr>
+						</table>
+						<p class='description'>Octopus's eight tenticles help them press buttons really quickly!</p>
+					</div>
+
+					<div class='upgrade' id='u-six' onclick='upgrade(1000,5,5)'>
+						<h3 class='title'>Basic Programmer</h3>
+						<p class='cost'>Cost: <span class='cost-value'>1,000</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='positive'>+5</span></td>
+								<td><span class='positive'>+5</span></td>
+							</tr>
+						</table>
+						<p class='description'>Programs an application to automatically create clicks</p>
+					</div>
+
+					<div class='upgrade' id='u-seven' onclick='upgrade(1500,-2,15)'>
+						<h3 class='title'>Horse</h3>
+						<p class='cost'>Cost: <span class='cost-value'>1,500</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='negative'>-2</span></td>
+								<td><span class='positive'>+15</span></td>
+							</tr>
+						</table>
+						<p class='description'>Stomps really hard on the clicker button!</p>
+					</div>
+
+					<div class='upgrade' id='u-eight' onclick='upgrade(5000,20,0)'>
+						<h3 class='title'>Two Hands</h3>
+						<p class='cost'>Cost: <span class='cost-value'>5,000</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='positive'>+20</span></td>
+								<td><span class='neutral'>±0</span></td>
+							</tr>
+						</table>
+						<p class='description'>Extra Hands to click even more</p>
+					</div>
+
+					<div class='upgrade' id='u-nine' onclick='upgrade(20000,30,30)'>
+						<h3 class='title'>Experienced Programmer</h3>
+						<p class='cost'>Cost: <span class='cost-value'>20,000</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='positive'>+30</span></td>
+								<td><span class='positive'>+30</span></td>
+							</tr>
+						</table>
+						<p class='description'>An experienced programmer to code a really good clicking application</p>
+					</div>
+
+					<div class='upgrade' id='u-ten' onclick='upgrade(50000,-100,1000)'>
+						<h3 class='title'>Hacker</h3>
+						<p class='cost'>Cost: <span class='cost-value'>50,000</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='negative'>-100</span></td>
+								<td><span class='positive'>+1000</span></td>
+							</tr>
+						</table>
+						<p class='description'>Hacks the game, but at great cost. </p>
+					</div>
+
+					<div class='upgrade' id='u-eleven' onclick='upgrade(80000,1000,-10)'>
+						<h3 class='title'>Avacado</h3>
+						<p class='cost'>Cost: <span class='cost-value'>80,000</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='positive'>+1000</span></td>
+								<td><span class='negative'>-10</span></td>
+							</tr>
+						</table>
+						<p class='description'>It works. Don't question it.</p>
+					</div>
+
+					<div class='upgrade' id='u-twelve' onclick='upgrade(150000,0,1500)'>
+						<h3 class='title'>Python Developer</h3>
+						<p class='cost'>Cost: <span class='cost-value'>150,000</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='neutral'>±0</span></td>
+								<td><span class='positive'>+1500</span></td>
+							</tr>
+						</table>
+						<p class='description'>Python is not a bad language.</p>
+					</div>
+
+					<div class='upgrade' id='u-thirteen' onclick='upgrade(300000,0,2000)'>
+						<h3 class='title'>JavaScript Developer</h3>
+						<p class='cost'>Cost: <span class='cost-value'>300,000</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='neutral'>±0</span></td>
+								<td><span class='positive'>+2000</span></td>
+							</tr>
+						</table>
+						<p class='description'>JavaScript is a really useful languageto know.</p>
+					</div>
+
+					<div class='upgrade' id='u-fourteen' onclick='upgrade(500000,0,3000)'>
+						<h3 class='title'>C# Developer</h3>
+						<p class='cost'>Cost: <span class='cost-value'>500,000</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='neutral'>±0</span></td>
+								<td><span class='positive'>+3000</span></td>
+							</tr>
+						</table>
+						<p class='description'>C# is like Java, except good.</p>
+					</div>
+
+					<div class='upgrade' id='u-fifteen' onclick='upgrade(1000000,0,10000)'>
+						<h3 class='title'>C++ Developer</h3>
+						<p class='cost'>Cost: <span class='cost-value'>1,000,000</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='neutral'>±0</span></td>
+								<td><span class='positive'>+10000</span></td>
+							</tr>
+						</table>
+						<p class='description'>std﹤﹤cout "Hello World" (Whoops! Forgot the comma and now my entire program is broken!)</p>
+					</div>
+
+					<div class='upgrade' id='u-sixteen' onclick='upgrade(10000000,1500000,1500000)'>
+						<h3 class='title'>LOLCODE Developer</h3>
+						<p class='cost'>Cost: <span class='cost-value'>10,000,000</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='positive'>+1500000</span></td>
+								<td><span class='positive'>+1500000</span></td>
+							</tr>
+						</table>
+						<p class='description'>Only the greatest dev's use LOLCODE</p>
+					</div>
+
+					<div class='upgrade' id='u-seventeen' onclick='upgrade(10000000,-1500000,-1500000)'>
+						<h3 class='title'>BrainF Dev</h3>
+						<p class='cost'>Cost: <span class='cost-value'>10,000,000</span></p>
+						<table class='upgrade-stats'>
+							<tr>
+								<th>Mult</th>
+								<th>CPS</th>
+							</tr>
+							<tr>
+								<td><span class='negative'>-1500000</span></td>
+								<td><span class='negative'>-1500000</span></td>
+							</tr>
+						</table>
+						<p class='description'>Would you like to instantly lose 100000000000 brain cells? Code in BrainF</p>
+					</div>
+				</div>
+				<button onclick='closeUpgrades()' class='bigger-button'>Close</button>
+			</div>
+		</div>
+		<div class='popup' id='settings'>
+			<div class='popup-content'>
+				<h1>Settings</h1>
+				<button onclick='reset()' class='button-block'>Reset Game</button>
+				<button onclick='showAllUpgrades()' class='button-block off' id='show-all'>Show All Upgrades</button>
+				<button onclick='removeAlerts()' class='button-block on' id='alerts'>Remove Alerts</button>
+				<button button onclick='closeAndSaveSettings()' class='bigger-button'>Close</button>
+			</div>
+		</div>
+		<div class='options'>
+			<button onclick='openUpgrades()'>Upgrades</button>
+			<button onclick='save()'>Save</button>
+			<button onclick='openSettings()'>Settings</button>
+		</div>
+    	<div class='stats'>
+			<div class='left'>
+				<h2>All Time Clicks: <span id='user-clicks'>0</span></h2>
+				<h2>Bucks: <span id='user-bucks'>0</span></h2>
+			</div>
+			<div class='right'>
+				<h3>Mult: <span id='user-mult'>1</span>x</h3>
+				<h3>CPS: <span id='user-cps'>0</span></h3>
+			</div>
+			<div class='center'>
+				<h1>Level: <span id='user-level'>1</span></h1>
+			</div>
+    	</div>
+		<div class='reward'>
+			<h1>Next Level Reward: <span id='next-level-reward'>200 bucks</span></h1>
+		</div>
+		<div class='clicker'>
+			<div class='xp-bar'>
+				<span id='xp'>0</span>/<span id='needed-xp'>100</span>xp
+				<div class='xp-bar-outer'>
+					<div id='xp-var-value' class='xp-bar-inner'></div>
+				</div>
+			</div>
+			<button id='click-button' onclick='clickActions()' onmousedown='hold=true;' onmouseup='hold=false'>Click Me</button>
+		</div>
+    <script src="script.js"></script>
+  </body>
+</html>
