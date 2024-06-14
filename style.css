@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300&family=Outfit:wght@300&family=Shippori+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-	--background-color: #262626;
-	--highlight-color: rgb(12, 180, 54);
+	--background-color: #131313;
+	--highlight-color: rgb(188 188 255);
 	--error-color: #B3001B;
-	--border-color: rgb(104, 46, 171);
 	--color: white;
 }
 
@@ -17,15 +16,17 @@ html, body {
 body {
 	background-color: var(--background-color);
 	color: var(--color);
-	font-family: 'Outfit', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	height: 90vh;
 }
 
 h1 {
 	color: var(--highlight-color);
 }
-h1 {
-	font-family: 'Shippori Antique', sans-serif;
+
+h2,h3 {
+	font-weight: 500;
+	opacity: 0.9;
 }
 
 .button-block {
@@ -38,16 +39,16 @@ h1 {
 .options {
 	width: 100%;
 	height: 50px;
-	background-color: rgba(0,0,0,0.3); /* might change this to a solid background later */
+	background-color: rgba(0,0,0,0.3);
 }
 .options button {
 	font-size: 15px;
 	color: white;
 	height: 30px;
 	margin: 10px auto;
-	border: 3px solid rgb(104, 104, 214);
-	background-color: rgba(0,0,0,0);
-	border-radius: 2px;
+	border: 1px solid rgb(104, 104, 214);
+	border-radius: 4px;
+	background-color: transparent;
 	transition: .1s;
 }
 .options button:hover {
@@ -62,17 +63,14 @@ h1 {
 
 .xp-bar {
 	margin: 10px auto;
-	font-family: 'M PLUS 2', sans-serif;
 }
 .xp-bar-outer {
-	margin: 5px auto;
-	width: 60%;
-	max-width: 1000px;
-	height: 30px;
-	border: 3px solid var(--border-color);
-	border-radius: 10px;
-	background-color: #242138;
-
+		margin: 21px auto;
+		width: 60%;
+		max-width: 1000px;
+		height: 30px;
+		border-radius: 10px;
+		background-color: #242138;
 }
 .xp-bar-inner {
 	width: 50%;
@@ -84,21 +82,20 @@ h1 {
 
 
 #click-button {
-	width: 300px;
-	height: 200px;
-	margin: 30px auto;
-	border-radius: 15px;
-	border: 5px solid rgb(233, 105, 0);
-	background-color: rgb(255, 145, 0);
-	color: white;
-	font-family: Trebuchet MS, sans-serif;
-	font-size: 50px;
-	box-shadow: 5px 5px 7px rgb(36, 35, 35);
-	transition: .1s;
+		width: 300px;
+		height: 200px;
+		margin: 30px auto;
+		border-radius: 15px;
+		border: 5px solid rgb(233, 105, 0);
+		color: rgb(255 135 37);
+		background-color: rgb(255 145 0 / 4%);
+		font-size: 50px;
+		box-shadow: inset 0 0 7px rgb(233 105 0 / 44%);
+		transition: .1s;
 }
 #click-button:hover {
 	transform: translate(0px, -2px);
-	box-shadow: 7px 7px 10px rgb(36, 35, 35);
+	box-shadow: inset 0 0 20px rgb(233 105 0 / 74%);
 }
 
 
@@ -121,12 +118,12 @@ h1 {
 	}
 }
 .stats {
-	min-width: 300px;
-	width: 80%;
-	max-width: 13000px;
-	margin: 10px auto;
-	border: 3px solid rgb(104, 104, 214);
-	border-radius: 10px;
+		min-width: 300px;
+		width: 80%;
+		max-width: 13000px;
+		margin: 10px auto;
+		border: 3px solid rgb(104, 104, 214);
+		border-radius: 14px;
 }
 
 .right, .left {
@@ -138,30 +135,30 @@ h1 {
 	vertical-align: middle;
 }
 .right {
-	border-left: 4px solid rgb(30, 30, 32);
+	border-left: 1px solid rgb(30, 30, 32);
 	color: white;
 }
 .left {
-	border-right: 4px solid rgb(30, 30, 32);
+	border-right: 1px solid rgb(30, 30, 32);
 	text-align: justify;
 	padding-left: 10px;
 	color: white;
 }
 .center {
-	border-top: 4px solid rgb(30, 30, 32);
+	border-top: 1px solid rgb(30, 30, 32);
 }
 
 
-
 .popup {
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.9);
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 5;
-	overflow: auto;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(0 0 0 / 84%);
+		backdrop-filter: blur(16px);
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 5;
+		overflow: auto;
 }
 .popup-content {
 	margin: 20px auto;
@@ -180,31 +177,37 @@ h1 {
 	vertical-align: middle;
 }
 .upgrade:hover {
-	box-shadow: 0px 0px 10px rgb(255, 255, 255);
+	box-shadow: 0px 0px 5px rgb(255, 255, 255);
 	transform: translate(0px, -3px);
+}
+.select {
+	background: #fff;
+	padding: 2px;
+	border: 0;
+	border-radius: 4px !important;
 }
 .title {
 	text-decoration: underline;
 	color: var(--highlight-color);
 }
 .cost {
-	font-family: 'Trebuchet MS', sans-serif;
 	font-weight: bolder;
 }
 .cost-value {
-	font-family: monospace;
-	font-weight: normal;
-	font-size: 17px;
-	background-color: rgb(36, 35, 35);
+		font-family: monospace;
+		font-weight: normal;
+		font-size: 17px;
+		padding: 0 5px;
+		border-radius: 2px;
+		background-color: rgb(36 35 35);
 }
 
 .upgrade table {
 	margin: 5px auto;
-	border-top: 1px solid white;
-	border-bottom: 1px solid white;
 	width: 50%;
 }
 .upgrade table th {
+	font-weight: 600;
 	text-decoration: underline;
 }
 .upgrade table td {
@@ -306,4 +309,17 @@ h1 {
 @keyframes appear {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
+}
+::selection {
+		background: rgb(188 188 255 / 9%);
+		text-shadow: none;
+}
+::-webkit-scrollbar {
+		width: 8px;
+}
+::-webkit-scrollbar-track {
+		background: transparent;
+}
+::-webkit-scrollbar-thumb {
+		background: #2e343c;
 }
